@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import SmoothScroll from "../components/SmoothScroll";
 import GlowCursor from "../components/GlowCursor";
+import InitialLoader from "../components/InitialLoader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       className={`${geistSans.variable} ${geistMono.variable} ${chillax.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans bg-[#f5f5f3] relative">
+        <InitialLoader />
         {/* Global Glow Cursor Overlay */}
         <div className="fixed inset-0 pointer-events-none z-50">
           <GlowCursor
